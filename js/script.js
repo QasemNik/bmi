@@ -7,7 +7,7 @@ const bmiResult = $.querySelector('#result')
 const categoryElem = $.querySelector('#category')
 
 function bmiCalculator () {
-    // console.log('BMI');
+   
     let weightInputValue = weightInput.value
     let heightInputValue = heightInput.value
 
@@ -18,16 +18,17 @@ function bmiCalculator () {
 
     bmiResult.innerHTML = bmiValue
 
-    if (bmiValue < 18.5) { // کم وزنی
+    if (bmiValue < 18.5) { 
         categoryElem.innerHTML = 'UnderWeight'
         bmiResult.style.color = '#ffc44d'
-    } else if (bmiValue >= 18.5 && bmiValue <= 24.9) { // نرمال هست
+    } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {  
         categoryElem.innerHTML = 'Normal Weight'
         bmiResult.style.color = '#0be881'
-    } else if (bmiValue >= 25 && bmiValue < 29.9) { // اضافه وزن
+    } else if (bmiValue >= 25 && bmiValue < 29.9) { 
+ 
         categoryElem.innerHTML = 'OverWeight'
         bmiResult.style.color = '#ff884d'
-    } else { // چاق
+    } else { 
         categoryElem.innerHTML = 'Obese'
         bmiResult.style.color = '#ff5e4d'
     }
